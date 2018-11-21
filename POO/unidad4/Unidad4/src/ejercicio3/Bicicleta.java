@@ -61,7 +61,7 @@ public class Bicicleta
 
     public void cambiarPlato()
     {
-        this.platoActual = 1;
+       cambiarPlato(1);
     }
 
     public void cambiarPlato(int plato)

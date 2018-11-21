@@ -5,6 +5,8 @@
  */
 package ejercicio1;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author luloop
@@ -13,11 +15,27 @@ public abstract class Persona
 {
     //<editor-fold desc="Atributos">
     private String nombre;
-    private double fechaDeNacimiento;
+    private LocalDate fechaDeNacimiento;
     // </editor-fold>
     
     //<editor-fold desc="Constructores">
-    public String getNombre()
+
+    public Persona()
+    {
+       
+    }
+    public Persona(String nombre, LocalDate fechaDeNacimiento)
+    {
+        this.nombre = nombre;
+        //this.fechaDeNacimiento = new LocalDate(fechaDeNacimiento);
+    }
+    
+   
+    // </editor-fold>   
+    
+    //<editor-fold desc="Get-Set">
+    
+        public String getNombre()
     {
         return nombre;
     }
@@ -27,18 +45,15 @@ public abstract class Persona
         this.nombre = nombre;
     }
 
-    public double getFechaDeNacimiento()
+    public LocalDate getFechaDeNacimiento()
     {
         return fechaDeNacimiento;
     }
 
-    public void setFechaDeNacimiento(double fechaDeNacimiento)
+    public void setFechaDeNacimiento(LocalDate fechaDeNacimiento)
     {
         this.fechaDeNacimiento = fechaDeNacimiento;
-    }    
-    // </editor-fold>   
-    
-    //<editor-fold desc="Get-Set">
+    } 
     
     
     
