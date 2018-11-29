@@ -1,4 +1,3 @@
-
 package DiscoMusical;
 
 public class DiscoMusical
@@ -13,6 +12,19 @@ public class DiscoMusical
 
     // </editor-fold>
     //<editor-fold desc="Constructores">
+    public DiscoMusical()
+    {
+
+        this.anio = 1994;
+    }
+
+    public DiscoMusical(String nombre)
+    {
+        this();
+        this.titulo = nombre;
+
+    }
+
     public DiscoMusical(String titulo, String autor, int anio, String formato, boolean digital)
     {
         this.titulo = titulo;
@@ -21,6 +33,7 @@ public class DiscoMusical
         this.formato = formato;
         this.digital = digital;
     }
+
     // </editor-fold>    
     //<editor-fold desc="Get-Set">
     /**
@@ -105,6 +118,5 @@ public class DiscoMusical
     //</editor-fold>
     //<editor-fold desc="Metodo">
     // </editor-fold>
-
 
 }

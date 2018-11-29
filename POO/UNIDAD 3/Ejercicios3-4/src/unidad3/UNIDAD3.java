@@ -1,17 +1,14 @@
-
 package unidad3;
 
 public class UNIDAD3
 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args)
     {
-        Empleado nuevoEmpleado = new Empleado(recursos.randoms.Nombre(), recursos.randoms.Apellido(), recursos.randoms.Entero(18, 45), Boolean.FALSE, 10000);
-        Empleado nuevoEmpleado2 = new Empleado(recursos.randoms.Nombre(), recursos.randoms.Apellido(), recursos.randoms.Entero(18, 45), Boolean.FALSE, 20000);
-        Empleado nuevoEmpleado3 = new Empleado(recursos.randoms.Nombre(), recursos.randoms.Apellido(), recursos.randoms.Entero(18, 45), Boolean.FALSE, 50000);
+
+        Empleado nuevoEmpleado = new Empleado(recursos.randoms.Nombre(), recursos.randoms.Apellido(), recursos.randoms.Entero(18, 45), recursos.randoms.VerdaderoFalso(), 10000);
+        Empleado nuevoEmpleado2 = new Empleado(recursos.randoms.Nombre(), recursos.randoms.Apellido(), recursos.randoms.Entero(18, 45), recursos.randoms.VerdaderoFalso(), 20000);
+        Empleado nuevoEmpleado3 = new Empleado(recursos.randoms.Nombre(), recursos.randoms.Apellido(), recursos.randoms.Entero(18, 45), recursos.randoms.VerdaderoFalso(), 50000);
 
         StringBuilder retorno = new StringBuilder();
 
@@ -26,6 +23,7 @@ public class UNIDAD3
         nuevoEmpleado2.mostrar();
         nuevoEmpleado3.mostrar();
 
+        System.out.println("Aumento de Salario");
         nuevoEmpleado.aumeentarSalario(20);
 
         nuevoEmpleado.mostrar();

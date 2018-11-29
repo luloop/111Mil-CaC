@@ -138,9 +138,9 @@ public class Empleado
 
         retorno.append(recursos.formato.tabParaListados(this.nombre, 10));
         retorno.append(recursos.formato.tabParaListados(this.cedula, 10));
-        retorno.append(recursos.formato.tabParaListados(this.edad, 10) + "        " + "||");
-        retorno.append(this.casado);
-        retorno.append("      " + recursos.formato.tabParaListados((float) this.salario, 2));
+        retorno.append(recursos.formato.tabParaListados(this.edad, 10));
+        retorno.append(recursos.formato.tabParaListados(this.casado, 10));
+        retorno.append(recursos.formato.tabParaListados(this.salario, 10));
 
         System.out.println(retorno);
 
@@ -150,7 +150,7 @@ public class Empleado
     {
         if (aumento > 0)
         {
-            this.salario += this.salario * ((double)aumento/100);
+            this.salario += this.salario * ((double) aumento / 100);
         }
     }
 
