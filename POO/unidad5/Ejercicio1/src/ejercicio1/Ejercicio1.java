@@ -19,16 +19,24 @@ public class Ejercicio1
     {
         Secretario secretario1 = new Secretario("Pepe", "Rizzi", "30887699", "Casa 1123", true, "1111111111", 0, "2222222");
         JefeDeZona nuevoJefe = new JefeDeZona(true, secretario1, "Honda", "AAA000", "2015", "Jefe", "Zona", "12345678", "la casa del jefe", "1111555555", 1500);
-        Vendedor vendedor1 = new Vendedor("lolo", "222aaaa", "2005", "1565556666", "CABA", 150000, "lool", "#poool", "123654", "direccion", "telefono", 0);
-        Vendedor vendedor2 = new Vendedor("lolo", "222aaaa", "2005", "1565556666", "CABA", 150000, "lool", "#poool", "123654", "direccion", "telefono", 0);
-        Vendedor vendedor3 = new Vendedor("lolo", "222aaaa", "2005", "1565556666", "CABA", 150000, "lool", "#poool", "123654", "direccion", "telefono", 0);
+        Vendedor vendedor1 = new Vendedor("lolo", "222aaaa", "2005", "1565556666", "CABA", 150000, "lool", "#poool", "123654", "direccion", "telefono", 500);
+        Vendedor vendedor2 = new Vendedor("lolo", "222aaaa", "2005", "1565556666", "CABA", 150000, "lool", "#poool", "123654", "direccion", "telefono", 255555);
+        Vendedor vendedor3 = new Vendedor("lolo", "222aaaa", "2005", "1565556666", "CABA", 150000, "lool", "#poool", "123654", "direccion", "telefono", 15023);
 
         nuevoJefe.AgregarVendedor(vendedor3);
         nuevoJefe.AgregarVendedor(vendedor1);
         nuevoJefe.AgregarVendedor(vendedor2);
         vendedor3.incrementarSalario(100);
+        vendedor3.incrementarSalario(3000);
+        nuevoJefe.incrementarSalario(3000);
         
         System.out.println(nuevoJefe.toString());
+        
+        nuevoJefe.EliminarVendedor(vendedor1);
+        System.out.println("------------------");
+        
+        System.out.println(nuevoJefe.toString());
+        
     }
 
 }

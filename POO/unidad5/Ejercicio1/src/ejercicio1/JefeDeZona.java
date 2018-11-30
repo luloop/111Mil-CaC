@@ -66,6 +66,8 @@ public class JefeDeZona extends Empleado
         StringBuilder retorno = new StringBuilder();
         retorno.append(super.toString());
         retorno.append("Jefe");
+        retorno.append(this.secretario.toString());
+        
         for (Vendedor vendedore : vendedores)
         {
             retorno.append(vendedore.toString());
