@@ -35,15 +35,19 @@ public class JefeDeZona extends Empleado
 
     public void AgregarVendedor(Vendedor vendedor)
     {
-        if(!this.vendedores.contains(vendedor))
-        this.vendedores.add(vendedor);
+        if (!this.vendedores.contains(vendedor))
+        {
+            this.vendedores.add(vendedor);
+        }
 
     }
-    
+
     public void EliminarVendedor(Vendedor vendedor)
     {
-        if(this.vendedores.contains(vendedor))
-        this.vendedores.remove(vendedor);
+        if (this.vendedores.contains(vendedor))
+        {
+            this.vendedores.remove(vendedor);
+        }
 
     }
 
@@ -60,22 +64,33 @@ public class JefeDeZona extends Empleado
 
     }
 
-     @Override
+    @Override
     public String toString()
     {
         StringBuilder retorno = new StringBuilder();
+        retorno.append("\nJefe\n");
         retorno.append(super.toString());
-        retorno.append("Jefe");
+
+        retorno.append("Auto\nMarca:").append(this.marcaAuto);
+        retorno.append(" Patente: ").append(this.patenteAuto);
+        retorno.append(" Modelo: ").append(this.modeloAuto);
+        retorno.append(" Modelo: ").append(this.modeloAuto);
+        retorno.append(" \nDespacho: ").append(this.despacho);
+        
+        retorno.append("\n   -Secretario-\n");
         retorno.append(this.secretario.toString());
         
+        retorno.append(" \n-----Lista de Vendedores--------");
+        retorno.append(" \n--------------------------------");
+            int i=1;
         for (Vendedor vendedore : vendedores)
         {
+            retorno.append("\n--------VENDEDOR "+ i+" -------- \n");
             retorno.append(vendedore.toString());
+            i++;
         }
-        //terminar retorno
 
         return retorno.toString();
     }
-    
-    
+
 }

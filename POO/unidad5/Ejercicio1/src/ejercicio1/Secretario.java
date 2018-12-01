@@ -35,8 +35,13 @@ public class Secretario extends Empleado
     public String toString()
     {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("\nSecretariooooooo\n");
+        
         retorno.append(super.toString());
+
+        retorno.append(" Fax: ").append(this.numeroFax);
+        retorno.append(" \nDespacho: ").append(this.despacho);
+        /* protected boolean despacho;
+    protected String numeroFax;*/
         //terminar retorno
 
         return retorno.toString();

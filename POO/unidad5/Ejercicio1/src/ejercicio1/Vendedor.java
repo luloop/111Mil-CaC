@@ -49,8 +49,14 @@ public class Vendedor extends Empleado
     public String toString()
     {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("\n VENDEDOR \n");
+        
         retorno.append(super.toString());
+        retorno.append("Auto\nMarca:").append(this.marcaAuto);
+        retorno.append(" Patente: ").append(this.patenteAuto);
+        retorno.append(" Modelo: ").append(this.modeloAuto);
+        retorno.append(" Modelo: ").append(this.modeloAuto);
+        retorno.append(" \nTelefono Movil: ").append(this.telefonoMovil);
+        retorno.append(" \nArea: ").append(this.areaVenta);
         
         //terminar retorno
 
