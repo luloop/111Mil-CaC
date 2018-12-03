@@ -11,5 +11,39 @@ package parte2;
  */
 public class AvesEnZoo
 {
+    protected String tipoDeAve;
+    protected int numeroAves;
+    protected int numeroMachos;
+    protected int numeroHembras;
+
+    public AvesEnZoo(String tipoDeAve, int numeroAves, int numeroMachos, int numeroHembras)
+    {
+        this.tipoDeAve = tipoDeAve;
+        this.numeroAves = numeroAves;
+        this.numeroMachos = numeroMachos;
+        this.numeroHembras = numeroHembras;
+    }
+    
+    @Override
+    public String toString()
+    {
+        StringBuilder retorno  = new StringBuilder();
+         
+        retorno.append(this.tipoDeAve).append(" ");
+        retorno.append(this.numeroAves).append(" ");
+        retorno.append(this.numeroMachos).append(" ");
+        retorno.append(this.numeroHembras).append(" ");
+        
+        
+        
+        return retorno.toString();
+        
+        
+        
+        
+    }
+    
+    
     
 }
+
