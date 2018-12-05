@@ -26,16 +26,11 @@ public class programa
         AvesEnZoo ave2 = new AvesEnZoo("LOle", 20, 15, 10);
         AvesEnZoo ave3 = new AvesEnZoo("LOli", 20, 15, 10);
         AvesEnZoo ave4 = new AvesEnZoo("LOlo", 20, 15, 10);
+        AvesEnZoo [] avesEnZoo = {ave1, ave2, ave3};
         
-        GrupoDeAves nuevoGrupo = new GrupoDeAves();
-        
-       nuevoGrupo.getLista().add(ave1);
-       nuevoGrupo.getLista().add(ave2);
-       nuevoGrupo.getLista().add(ave3);
-       nuevoGrupo.getLista().add(ave4);
+        GrupoDeAves nuevoGrupo = new GrupoDeAves(avesEnZoo);
 
-
-        Iterator<AvesEnZoo> iterador = new Iterator();
+        Iterator<AvesEnZoo> iterador = nuevoGrupo;
         
         while (iterador.hasNext())
         {

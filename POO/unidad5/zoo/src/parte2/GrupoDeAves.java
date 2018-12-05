@@ -15,23 +15,24 @@ import java.util.Iterator;
 public class GrupoDeAves implements Iterator<AvesEnZoo>
 {
 
-    private ArrayList<AvesEnZoo> lista;
-    protected int posicionarray;
+    private AvesEnZoo[] lista;
+    protected static int posicionarray = 0;
 
-    public GrupoDeAves()
+    public GrupoDeAves(AvesEnZoo[] avesTodas)
     {
-        this.lista = new ArrayList();
+        this.lista = avesTodas;
     }
 
     public boolean hasNext()
     {
         boolean result;
-        if (posicionarray < this.getLista().size())
+        if (posicionarray < this.lista.length)
         {
             result = true;
         } else
         {
             result = false;
+            posicionarray = 0;
         }
         return result;
     }
@@ -40,20 +41,10 @@ public class GrupoDeAves implements Iterator<AvesEnZoo>
     public AvesEnZoo next()
     {
         posicionarray++;
-        return getLista().get(posicionarray - 1);
+        return this.lista[posicionarray - 1];
     }
 
-    public ArrayList<AvesEnZoo> getLista()
-    {
-        return lista;
-    }
-
-    public void setLista(ArrayList<AvesEnZoo> lista)
-    {
-        this.lista = lista;
-    }
-
-  /*  public Iterator<AvesEnZoo> iterator()
+    /*  public Iterator<AvesEnZoo> iterator()
     {
         Iterator it = new IteratorAvesEnZoo();
         return it;
