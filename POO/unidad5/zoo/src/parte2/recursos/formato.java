@@ -5,7 +5,9 @@
  */
 package recursos;
 
+
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 /**
  *
@@ -33,55 +35,12 @@ public class formato
 
         return aux.toString();
     }
-    
-    public static String tabParaListados(int cadenaInt, int cantidad)
+
+    public static String tabParaListados(int numero, int cantidad)
     {
         StringBuilder aux = new StringBuilder();
         
-        String cadena= Integer.toString(cadenaInt);
-
-        aux.append("|| ");
-
-        for (int i = 0; i < cantidad; i++)
-        {
-            if (cadena.length() <= i)
-            {
-                aux.append(" ");
-            } else
-            {
-                aux.append(cadena.charAt(i));
-            }
-        }
-
-        return aux.toString();
-    }
-    
-    public static String tabParaListados(boolean cadenaInt, int cantidad)
-    {
-        StringBuilder aux = new StringBuilder();
-        
-        String cadena= Boolean.toString(cadenaInt);
-
-        aux.append("|| ");
-
-        for (int i = 0; i < cantidad; i++)
-        {
-            if (cadena.length() <= i)
-            {
-                aux.append(" ");
-            } else
-            {
-                aux.append(cadena.charAt(i));
-            }
-        }
-
-        return aux.toString();
-    }
-    public static String tabParaListados(double cadenaInt, int cantidad)
-    {
-        StringBuilder aux = new StringBuilder();
-        
-        String cadena= Double.toString(cadenaInt);
+        String cadena = Integer.toString(numero);
 
         aux.append("|| ");
 
@@ -99,15 +58,27 @@ public class formato
         return aux.toString();
     }
 
-    public static String tabParaListados(float cadena, int cantidad)
+    public static String tabParaListados(float cadena, int cantidad, int cantCaract)
     {
         DecimalFormat df = new DecimalFormat();
         String aux;
         df.setMaximumFractionDigits(cantidad);
         aux = "|| ";
         aux += df.format(cadena);
+        StringBuilder aux2 = new StringBuilder();
+        
+         for (int i = 0; i < cantCaract; i++)
+        {
+            if (aux.length() <= i)
+            {
+                aux2.append(" ");
+            } else
+            {
+                aux2.append(aux.charAt(i));
+            }
+        }
 
-        return aux;
+        return aux2.toString();
     }
 
    /* public static void listadoMatriz(ArrayList<Llamada> lista, int cantColumnas)

@@ -15,20 +15,13 @@ import java.util.concurrent.ThreadLocalRandom;
 public class randoms
 {
 
-    public static int Entero() //MODIFICAR ENUM
+     public static int Entero() //MODIFICAR ENUM
     {
         Random random = new Random();
         int numero = random.nextInt();
         return numero;
     }
-
-    public static double Doble() //MODIFICAR ENUM
-    {
-        Random random = new Random();
-        double numero = random.nextInt();
-        return numero;
-    }
-
+     
     public static int Entero(int min, int max) //MODIFICAR ENUM
     {
         Random random = new Random();
@@ -47,7 +40,7 @@ public class randoms
     {
         String[] inicio =
         {
-            "Lolo", "Lala", "Carolina", "Marco", "Cecilia", "Marina", "Marta", "Mabel"
+            "Lolo", "Lala", "Carolina", "Marco", "Cecilia","Marina", "Marta", "Mabel"
         };
 
         return inicio[java.util.concurrent.ThreadLocalRandom.current().nextInt(inicio.length)];
@@ -56,33 +49,28 @@ public class randoms
     public static String Apellido()
     {
         String[] inicio =
-        {
-            "Rizzi", "Perez", "Gomez", "Lopez", "Fernandez", "Batana", "Apellido", "Mendez", "Martinez",
+        {"Rizzi", "Perez", "Gomez", "Lopez", "Fernandez", "Batana", "Apellido", "Mendez", "Martinez",
         };
 
         return inicio[java.util.concurrent.ThreadLocalRandom.current().nextInt(inicio.length)];
     }
-
+    
     public static String Sexo()
     {
         String[] inicio =
-        {
-            "Femenino", "Masculino", "no Binario",
+        {"Femenino", "Masculino", "no Binario",
         };
 
         return inicio[java.util.concurrent.ThreadLocalRandom.current().nextInt(inicio.length)];
     }
-
-    public static boolean VerdaderoFalso()
-    {
-        Random random = new Random();
-          return  random.nextBoolean();
-    }
-
-    /*
+    
+    
+/*
     public static ERaza getRandom() //MODIFICAR ENUM
     {
         return ERaza.values()[(int) (Math.random() * ERaza.values().length)];
     }
-     */
+ */
+
+
 }

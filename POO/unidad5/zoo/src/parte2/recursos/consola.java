@@ -14,6 +14,11 @@ import java.util.Scanner;
 public class consola
 {
 
+    /**
+     * Pide en Consola y Recibe un String
+     *
+     *
+     */
     public static String leerString()
     {
 

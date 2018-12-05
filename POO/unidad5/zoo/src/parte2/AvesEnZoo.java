@@ -11,6 +11,7 @@ package parte2;
  */
 public class AvesEnZoo
 {
+
     protected String tipoDeAve;
     protected int numeroAves;
     protected int numeroMachos;
@@ -23,27 +24,19 @@ public class AvesEnZoo
         this.numeroMachos = numeroMachos;
         this.numeroHembras = numeroHembras;
     }
-    
+
     @Override
     public String toString()
     {
-        StringBuilder retorno  = new StringBuilder();
-         
-        retorno.append(this.tipoDeAve).append(" ");
-        retorno.append(this.numeroAves).append(" ");
-        retorno.append(this.numeroMachos).append(" ");
-        retorno.append(this.numeroHembras).append(" ");
-        
-        
-        
-        return retorno.toString();
-        
-        
-        
-        
-    }
-    
-    
-    
-}
+        StringBuilder retorno = new StringBuilder();
 
+        retorno.append(recursos.formato.tabParaListados(this.tipoDeAve, 10));
+        retorno.append(recursos.formato.tabParaListados(this.numeroAves, 7));
+        retorno.append(recursos.formato.tabParaListados(this.numeroMachos, 7));
+        retorno.append(recursos.formato.tabParaListados(this.numeroHembras, 7));
+
+        return retorno.toString();
+
+    }
+
+}
