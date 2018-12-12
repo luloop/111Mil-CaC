@@ -5,24 +5,30 @@
  */
 package ejercicio1.u6;
 
-import static ejercicio1.u6.Ejercicio1U6.f2;
-
 /**
  *
- * @author luloop
+ * @author capacita_mecon
  */
-public class ejercicio3U6
+public class ejercicio3U6 extends Exception
 {
-
-    public static void main(String[] args) throws Exception
+    public static void main(String[] args) throws ejercicio3U6
     {
         try
         {
-
-        } catch (Exception nfe)
+            throw new ejercicio3U6("Argumento de la excepcion");
+            
+        } catch (ejercicio3U6 e)
         {
-            throw new Exception("Intruccion 1");
+            System.out.println(e.getMessage());
+        }
+        finally
+        {
+            System.out.println("Finalizo el programa");
         }
     }
-
+    
+    public ejercicio3U6(String msg)
+    {
+        super(msg);
+    }
 }

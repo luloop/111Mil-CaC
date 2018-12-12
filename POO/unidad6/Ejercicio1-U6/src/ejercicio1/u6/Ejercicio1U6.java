@@ -9,7 +9,7 @@ package ejercicio1.u6;
  *
  * @author luloop
  */
-public class Ejercicio1U6
+public class Ejercicio1U6 
 {
 
     public static void main(String[] args) throws Exception
